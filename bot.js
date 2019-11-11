@@ -13,7 +13,7 @@ require('./util/eventLoader')(client);
 var prefix = ayarlar.prefix;
 
 client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
+  console.log(`Logged in ass ${client.user.tag}!`);
 });
 
 const log = message => {
