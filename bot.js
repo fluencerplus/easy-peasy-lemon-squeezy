@@ -87,4 +87,4 @@ client.unload = command => {
 };
 
 
-client.login("NjQyOTM5MjU0OTgwNDc2OTU5.Xck32g.FlrPInK4JYPhWJIp8-aMb-y6MBk");
+client.login("NjQyOTM5MjU0OTgwNDc2OTU5.Xck6Bw.DwQcFRXX9VQXIEosFfWgYEcCNls");
