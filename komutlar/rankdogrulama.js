@@ -21,7 +21,6 @@ exports.run = function(client,message,args) {
         resp.on('end', () => {
             var dat = JSON.parse(data);
             var name = JSON.stringify(dat["data"]["platformInfo"]["platformUserId"]);
-            var rank = JSON.stringify(dat["data"]["segments"][0]["stats"]["rankScore"]["rank"]);
             var score = JSON.stringify(dat["data"]["segments"][0]["stats"]["rankScore"]["value"]);
             var level = JSON.stringify(dat["data"]["segments"][0]["stats"]["level"]["value"])
             const embed = {
@@ -37,10 +36,6 @@ exports.run = function(client,message,args) {
                   {
                     "name": "Level",
                     "value": level
-                  },
-                  {
-                    "name": "Rank Sıralaması",
-                    "value": rank
                   },
                   {
                     "name": "Rank Puanı",
