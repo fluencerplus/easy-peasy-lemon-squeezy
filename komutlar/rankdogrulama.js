@@ -50,6 +50,7 @@ exports.run = function(client,message,args) {
                   message.member.removeRole(ranks[i]);
                 }
               }
+            setTimeOut( () => {
               switch(true)
               {
                 case score < 1200:
@@ -65,13 +66,13 @@ exports.run = function(client,message,args) {
                   message.member.addRole('643363073884684289');
                   break;
                 case score < 10000:
-                  message.member.addRole('643363035372847115').catch(console.error);
-                  console.log('Rol Verildi.');
+                  message.member.addRole('643363035372847115');
                   break;
                 case score >= 10000:
                   message.member.addRole('643362860885606410');
                   break;
               }
+            }, 500);
         });
 
     }).on("error", (err) => {
