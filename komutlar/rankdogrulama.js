@@ -44,7 +44,7 @@ exports.run = function(client,message,args) {
                 ]
               };
               message.channel.send({ embed });
-              var ranks = ['Apex Predator','Diamond','Platinum','Gold','Silver','Bronze'];
+              var ranks = ['643363694012792832','643363648269582377','643363555445571584','643363073884684289','643363035372847115','643362860885606410'];
               for(var i = 0;i<6;i++) {
                 var gRole = message.guild.roles.find(x => x.name === ranks[i]);
                 if(message.member.roles.has(gRole.id)) {
