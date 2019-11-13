@@ -50,7 +50,7 @@ exports.run = function(client,message,args) {
                   message.member.removeRole(ranks[i]);
                 }
               }
-            setTimeOut( () => {
+            setTimeout( () => {
               switch(true)
               {
                 case score < 1200:
