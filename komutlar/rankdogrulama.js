@@ -1,13 +1,13 @@
 const Discord = require('discord.js');
 const https = require('https');
 
-RoleRemove = async () => {
+RoleRemove = async (message) => {
     var ranks = ['643363694012792832','643363648269582377','643363555445571584','643363073884684289','643363035372847115','643362860885606410'];
-                  for(var i = 0;i<6;i++) {
-                    if(message.member.roles.has(ranks[i])) {
-                      await message.member.removeRole(ranks[i]);
-                    }
-                  }
+    for(var i = 0;i<6;i++) {
+       if(message.member.roles.has(ranks[i])) {
+           await message.member.removeRole(ranks[i]);
+       }
+    }
 }
 
 exports.run = function(client,message,args) {
@@ -53,7 +53,7 @@ exports.run = function(client,message,args) {
                 ]
               };
               message.channel.send({ embed });
-              RoleRemove();
+              RoleRemove(message);
               switch(true)
               {
                 case score < 1200:
