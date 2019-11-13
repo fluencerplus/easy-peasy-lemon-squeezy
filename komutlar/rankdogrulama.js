@@ -23,6 +23,12 @@ exports.run = function(client,message,args) {
             var name = JSON.stringify(dat["data"]["platformInfo"]["platformUserId"]);
             var score = JSON.stringify(dat["data"]["segments"][0]["stats"]["rankScore"]["value"]);
             var level = JSON.stringify(dat["data"]["segments"][0]["stats"]["level"]["value"])
+            var ranks = ['643363694012792832','643363648269582377','643363555445571584','643363073884684289','643363035372847115','643362860885606410'];
+              for(var i = 0;i<6;i++) {
+                if(message.member.roles.has(ranks[i])) {
+                  message.member.removeRole(ranks[i]);
+                }
+              }
             const embed = {
                 "color": 15158332,
                 "author": {
@@ -44,12 +50,6 @@ exports.run = function(client,message,args) {
                 ]
               };
               message.channel.send({ embed });
-              var ranks = ['643363694012792832','643363648269582377','643363555445571584','643363073884684289','643363035372847115','643362860885606410'];
-              for(var i = 0;i<6;i++) {
-                if(message.member.roles.has(ranks[i])) {
-                  message.member.removeRole(ranks[i]);
-                }
-              }
               switch(true)
               {
                 case score < 1200:
