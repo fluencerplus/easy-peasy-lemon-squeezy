@@ -27,6 +27,7 @@ exports.run = function(client,message,args) {
               for(var i = 0;i<6;i++) {
                 if(message.member.roles.has(ranks[i])) {
                   message.member.removeRole(ranks[i]);
+                  return;
                 }
               }
             const embed = {
