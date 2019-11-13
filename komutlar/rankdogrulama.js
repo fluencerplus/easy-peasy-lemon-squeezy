@@ -65,7 +65,7 @@ exports.run = function(client,message,args) {
                   message.member.addRole('643363073884684289');
                   break;
                 case score < 10000:
-                  message.member.addRole('643363035372847115');
+                  message.member.addRole('643363035372847115').catch(console.error);
                   console.log('Rol Verildi.');
                   break;
                 case score >= 10000:
